@@ -1,0 +1,439 @@
+:root {
+  --pink: #ff99c8;
+  --yellow: #fcf6bd;
+  --mint: #d0f4de;
+  --blue: #a9def9;
+  --lavender: #e4c1f9;
+  --black: #000000;
+  --white: #ffffff;
+
+  --textwidth: 80%;
+}
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    /* background-color: var(--mint); */
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+.section-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Order vertical */
+    flex-direction: column;
+    height: 100vh;
+    background: transparent;
+    gap: 1em;
+}
+.section-welcome h1 {
+    font-size: 2em;
+}
+
+.section-welcome img {
+    /* width: auto; */
+    width: 75%; /* todo change this for mobile vs desktop */
+    max-height: 60vh;
+    object-fit: contain;
+    height: auto;
+    /* border-radius: 25px; */
+}
+
+.section-welcome #status-text {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1em;
+    color: var(--black);
+    text-align: right;
+}
+.section-welcome #status-text .status-text {
+    font-weight: bold;
+}
+
+.section-search {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lavender);
+    flex-direction: column;
+}
+.section-search p {
+    font-size: 1.5em;
+    text-align: center;
+    max-width: var(--textwidth);
+}
+.section-search img {
+    width: 25%;
+    height: auto;
+}
+
+.section-search .section-search-image-container {
+    position: absolute;
+    bottom: 1em;
+    left: 2em;
+}
+
+.section-desperate {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--mint);
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-desperate p {
+    max-width: var(--textwidth);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.section-about-me {
+    position: relative;
+    margin: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    /* margin-bottom: 2em; */
+    min-height: 100vh;
+    display: flex;
+    /* justify-content: left; */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    flex-direction: column;
+    gap: 1em;
+}
+
+.section-about-me span {
+    position: relative;
+    top: 1em;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left;
+}
+.section-about-me .section-about-me-content {
+    position: relative;
+    top: 1em;
+    font-size: 1.5em;
+    text-align: left;
+    max-width: var(--textwidth);
+}
+
+.section-transition {
+    position: relative;
+    /* padding: 1em; */
+    min-height: 30vh;
+    display: flex;
+    /* justify-content: left; */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 1); */
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+}
+
+.section-transition p {
+    font-size: 1.5em;
+    text-align: center;
+    max-width: var(--textwidth);
+}
+
+.section-cooking {
+    position: relative;
+    /* margin: 1em; */
+    min-height: 100vh;
+    padding-bottom: 6em;
+    background: var(--blue);
+}
+
+.section-cooking .main-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left;
+    top: 1em;
+    left: 1em;
+}
+
+.section-cooking .comment {
+    font-size: 1.5em;
+}
+
+.section-cooking #fancy_salad {
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    top: 3em;
+}
+
+.section-cooking .section-cooking-noodles-container {
+    position: relative;
+    top: 3em;
+    left: 12.5%;
+    width: 87.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* gap: 1em; */
+}
+
+.section-cooking .section-cooking-noodles-container #noodles {
+    /* width: 75%; */
+    position: relative;
+    /* left: 12.5%; */
+    /* top: 3em; */
+    width: 100%;
+    object-fit: contain;
+}
+
+.section-cooking .comment-left {
+    position: relative;
+    top: 2em;
+    text-align: left;
+    width: 75%;
+    left: 12.5%;
+}
+
+.section-cooking .comment-special-noodles {
+    position: relative;
+    /* top: -4em;  */
+    /* left: 50%; */
+    transform: rotate(90deg);
+    width: 50%;
+    text-align: right;
+} 
+
+.section-cooking #champions {
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    top: 3em;
+    margin-top: 1em;
+    border-radius: 200px;
+}
+
+.section-cooking .comment-champions {
+    position: relative;
+    font-size: 1em;
+    width: 75%;
+    left: 12.5%;
+    top: 3em;
+}
+
+.section-concerts {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--mint);
+    padding-bottom: 5em;
+}
+
+.section-concerts .main-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+    top: 1em;
+    left: 1em;
+}
+
+
+.section-concerts .comment {
+    font-size: 1.5em;
+}
+
+.section-concerts #the1975 {
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    top: 3em;
+}
+
+.section-concerts #bleachers {
+    width: 75%;
+    left: 12.5%;
+    position: relative;
+    top: 3em;
+}
+
+.section-concerts #mxmtoon {
+    width: 75%;
+    left: 12.5%;
+    position: relative;
+    top: 3em;
+    text-align: right;
+}
+
+.section-concerts .comment-left {
+    position: relative;
+    top: 2em;
+    text-align: left;
+    width: 75%;
+    left: 12.5%;
+}
+
+.section-music {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--pink);
+    padding-bottom: 5em;
+}
+
+.section-music .main-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+    top: 1em;
+    left: 1em;
+    padding-right: 2em;
+}
+
+.section-music #acoustic {
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    top: 3em;
+}
+
+.section-music .comment-left {  
+    position: relative;
+    top: 2em;
+    text-align: left;
+    width: 75%;
+    left: 12.5%;
+}
+
+.section-music .demo-container {
+    position: relative;
+    top: 2em;
+    text-align: left;
+    width: 75%;
+    left: 12.5%;
+}
+
+.section-music #stage {
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    top: 3em;
+}
+
+.section-why-should-you-care {
+    position: relative;
+    min-height: 50vh;
+    background-color: var(--white);
+    /* padding-bottom: 4em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-why-should-you-care .main-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    /* text-align: right; */
+    /* top: 1em; */
+    /* left: 1em; */
+    /* padding-right: 2em; */
+}
+
+.section-why-should-you-care p {
+    font-size: 1.25em;
+    text-align: center;
+    max-width: var(--textwidth);
+}
+
+.section-helpme {
+    position: relative;
+    min-height: 60vh;
+    background-color: var(--yellow);
+    /* padding-bottom: 5em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-top: 3em;
+}
+
+.section-helpme .main-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    /* top: 1em; */
+    /* left: 1em; */
+    /* padding-right: 2em; */
+}
+
+.section-helpme p {
+    font-size: 1.5em;
+    text-align: left;
+    max-width: var(--textwidth);
+}
+
+.section-contact {
+    position: relative;
+    min-height: 30vh;
+    width: 100%;
+    background-color: var(--white);
+    /* padding-bottom: 5em; */
+    /* display: block; */
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: center;  */
+}
+
+.section-contact .section-contact-content {
+    position: relative;
+    width: 100%;
+    /* background-color: red; */
+    height: 100%;
+}
+
+.section-contact .main-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    left: 1em;
+    top: 1em;
+    /* transf
+    orm: translateX(-100%); */
+    /* left: 50%; */
+}
+
+.section-contact ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 3em;
+    width: 75%;
+    left: 12.5%;
+    /* gap: 5em; */
+    /* left: 1em; */
+}
+
+.section-contact ul li {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
