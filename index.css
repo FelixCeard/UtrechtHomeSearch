@@ -24,6 +24,8 @@ body {
     line-height: 1.6;
 }
 
+
+
 .section-welcome {
     display: flex;
     justify-content: center;
@@ -46,6 +48,7 @@ body {
     height: auto;
     /* border-radius: 25px; */
 }
+
 
 .section-welcome #status-text {
     position: absolute;
@@ -145,6 +148,7 @@ body {
     align-items: center;
     background-color: var(--yellow);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    z-index: 10;
     /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 1); */
     /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
@@ -161,6 +165,7 @@ body {
     /* margin: 1em; */
     min-height: 100vh;
     padding-bottom: 6em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background: var(--blue);
 }
 
@@ -188,7 +193,7 @@ body {
     position: relative;
     top: 3em;
     left: 12.5%;
-    width: 87.5%;
+    width: 75%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -200,7 +205,7 @@ body {
     position: relative;
     /* left: 12.5%; */
     /* top: 3em; */
-    width: 100%;
+    width: 75%;
     object-fit: contain;
 }
 
@@ -213,11 +218,15 @@ body {
 }
 
 .section-cooking .comment-special-noodles {
-    position: relative;
+    position: absolute;
     /* top: -4em;  */
     /* left: 50%; */
-    transform: rotate(90deg);
-    width: 50%;
+    /* background-color: red; */
+    transform: rotate(-90deg);
+    transform-origin: right;
+    /* width: 75%; */
+    top: 0;
+    right: 12.5%;
     text-align: right;
 } 
 
@@ -227,7 +236,7 @@ body {
     left: 12.5%;
     top: 3em;
     margin-top: 1em;
-    border-radius: 200px;
+    border-radius: 100%;
 }
 
 .section-cooking .comment-champions {
@@ -243,6 +252,7 @@ body {
     overflow: hidden;
     min-height: 100vh;
     background-color: var(--mint);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding-bottom: 5em;
 }
 
@@ -295,6 +305,7 @@ body {
     overflow: hidden;
     min-height: 100vh;
     background-color: var(--pink);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding-bottom: 5em;
 }
 
@@ -343,17 +354,21 @@ body {
     overflow: hidden;
     min-height: 50vh;
     background-color: var(--white);
-    /* padding-bottom: 4em; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center;  */
 }
 
 .section-why-should-you-care .main-title {
     position: relative;
     font-size: 2em;
     font-weight: bold;
+    /* background-color: red; */
+    margin-bottom: 2em;
+    
+    left: calc(50%);
+    transform: translateX(-50%);
     /* text-align: right; */
     /* top: 1em; */
     /* left: 1em; */
@@ -372,22 +387,28 @@ body {
     min-height: 60vh;
     background-color: var(--yellow);
     /* padding-bottom: 5em; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1em;
-    padding-top: 3em;
+    /* background-color: blue; */
+    /* gap: 1em; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* padding-top: 3em; */
 }
 
 .section-helpme .main-title {
     position: relative;
+    display: block;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    /* top: 1em; */
-    /* left: 1em; */
-    /* padding-right: 2em; */
+    width: 75%;
+    padding-bottom: 1em;
+    /* background-color: red; */
+    left: calc(50% - 2em);
+    transform: translateX(-50%);
 }
 
 .section-helpme p {
@@ -417,7 +438,7 @@ body {
     height: 100%;
 }
 
-.section-contact .main-title {
+.main-title {
     position: relative;
     font-size: 2em;
     font-weight: bold;
@@ -446,4 +467,44 @@ body {
 .section-contact ul li {
     font-size: 1em;
     margin-bottom: 1em;
+}
+
+/* ─── Limit overall width on laptop / small-desktop screens ─── */
+@media screen and (min-width: 600px) {
+    /* Fix the body width and center it */
+    body {
+        max-width: 600px;     /* desired fixed page width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ─── Re-centre the images that use position:relative + left ─── */
+    .section-cooking #fancy_salad,
+    .section-cooking #champions,
+    .section-concerts #the1975,
+    .section-concerts #bleachers,
+    .section-concerts #mxmtoon,
+    .section-music    #acoustic,
+    .section-music    #stage {
+        left: 25%;
+        /* left: 12.5%; */
+        width: 50%;
+    }
+
+    /* Special case: noodles lives in an 87.5 %-wide flex-box */
+    .section-cooking .section-cooking-noodles-container #noodles {
+        /* left: 18.75%; (87.5 – 50) / 2 */
+        /* max-height: 500px; */
+        width: 66%;
+    }
+
+    .section-welcome #status-text {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    :root {
+        --textwidth: 80%;
+    }
 }
